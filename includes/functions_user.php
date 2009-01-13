@@ -89,10 +89,6 @@ function update_last_username()
 	global $db;
 
 	// Get latest username
-// --- IP Country Flag Olympus start --------------------
-// add
-// 		set_config('newest_user_reg_ip', $row['user_ip'], true);
-
 	$sql = 'SELECT user_id, username, user_colour, user_ip
 		FROM ' . USERS_TABLE . '
 		WHERE user_type IN (' . USER_NORMAL . ', ' . USER_FOUNDER . ')
@@ -106,10 +102,8 @@ function update_last_username()
 		set_config('newest_user_id', $row['user_id'], true);
 		set_config('newest_username', $row['username'], true);
 		set_config('newest_user_colour', $row['user_colour'], true);
-		set_config('newest_user_reg_ip', $row['user_ip'], true);
 	}
 }
-// --- IP Country Flag Olympus end ----------------------
 
 /**
 * Updates a username across all relevant tables/fields
@@ -287,7 +281,10 @@ function user_add($user_row, $cp_data = false)
 		set_config('newest_user_id', $user_id, true);
 		set_config('newest_username', $user_row['username'], true);
 		set_config('num_users', $config['num_users'] + 1, true);
-
+// --- IP Country Flag Olympus start --------------------
+// --- add
+		set_config('newest_user_reg_ip', $user_row['user_ip'], true);
+// --- IP Country Flag Olympus end ----------------------
 		$sql = 'SELECT group_colour
 			FROM ' . GROUPS_TABLE . '
 			WHERE group_id = ' . (int) $user_row['group_id'];
