@@ -3,7 +3,6 @@
 *
 * @package phpBB3
 * @author 3Di ( Marco ) http://gold.io3di.com
-* @version $Id: functions_ipcf_olympus.php 0001 2008-11-12 17:00 3Di $
 * @copyright (c) 2008 3Di
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
