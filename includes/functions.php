@@ -3516,12 +3516,12 @@ function obtain_users_online_string($online_users, $forum_id = 0)
 				WHERE ' . $db->sql_in_set('user_id', $online_users['online_users']) . '
 				ORDER BY username_clean ASC';
 */
-		$sql = 'SELECT DISTINCT u.user_id, u.username, u.username_clean, u.user_type, u.user_allow_viewonline, u.user_colour, u.user_lastvisit, u.user_ip, s.session_id, s.session_user_id, s.session_start, s.session_last_visit, s.session_ip, s.session_time
+		$sql = 'SELECT DISTINCT u.user_id, u.username, u.username_clean, u.user_type, u.user_allow_viewonline, u.user_colour, u.user_ip, s.session_user_id, s.session_ip
 				FROM ' . USERS_TABLE . ' u, ' . SESSIONS_TABLE . ' s
 				WHERE ' . $db->sql_in_set('u.user_id', $online_users['online_users']) . '
 					AND u.user_id = s.session_user_id
 						AND u.user_id <> ' . ANONYMOUS . '
-							AND s.session_time >= ' . (time() - (intval($config['session_length']))) . '
+							AND s.session_time >= ' . (time() - (intval($config['load_online_time']) * 60)) . '
 				ORDER BY u.username_clean ASC';
 // --- IP Country Flag Olympus end ----------------------
 		$result = $db->sql_query($sql);
