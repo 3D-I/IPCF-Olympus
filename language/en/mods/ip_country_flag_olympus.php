@@ -5,8 +5,8 @@
 * IP Country Flag Olympus [English]
 *
 * @package language
-* @version $Id: ip_country_flag_olympus.php,v 1.008 2008/10/31 12:43:00 3Di Exp $
-* @copyright (c) 2007, 2008 3Di (Marco T.) 
+* @version $Id: ip_country_flag_olympus.php,v 1.009 2009/01/17 12:43:00 3Di Exp $
+* @copyright (c) 2007, 2008, 2009 3Di (Marco T.) 
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
 */
@@ -54,7 +54,7 @@ $lang = array_merge($lang, array(
 	'ERROR_WHILE_READING_IP_TO_COUNTRY_TABLE'  	=> 'The IP to Country table seems to be missing. Make sure you have completely installed the MOD.',
 	'GUEST_ONLINE'                              => 'Guests (based on visits over the past session lenght - here is 24 hours) ',
 	'GUEST_ONLINE_NONE'                         => 'None',
-	'PAST_GUESTS'                               => 'Guests who have visited this board during the session\'s lenght: ',
+	'PAST_GUESTS'                               => 'Guests who have visited this board during the session\'s lenght:</br>',
 	'LOGIN_ADMIN'                               => 'Login Admin',
 	'LOGIN_ADMIN_SUCCESS'                       => 'Login Admin success',
 	'DATAFILE_STATUS'                           => 'Status of file',
