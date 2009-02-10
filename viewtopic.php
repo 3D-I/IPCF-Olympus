@@ -1088,7 +1088,6 @@ while ($row = $db->sql_fetchrow($result))
 // add
 // $row['user_ip']
 				'avatar'		=> ($user->optionget('viewavatars')) ? get_user_avatar($row['user_avatar'], $row['user_avatar_type'], $row['user_avatar_width'], $row['user_avatar_height'], $row['user_ip']) : '',
-				'age'			=> '',
 // --- IP Country Flag Olympus end ----------------------
 				'age'			=> '',
 
