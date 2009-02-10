@@ -68,7 +68,7 @@ $lang = array_merge($lang, array(
 	'USERS_24HOUR_TOTAL'						=> '%d Users active over the last 24 hours',
 //	'USERS_24HOUR_TOTAL_NONE'					=> 'None',
 
-	'country'    => array(
+	'country'	=> array(
 	'AX'										=> 'Åland Islands',
 	'AL'										=> 'Albania',
 	'DZ'										=> 'Algeria',
